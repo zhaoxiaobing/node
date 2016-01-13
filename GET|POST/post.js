@@ -10,6 +10,7 @@ const util = require('util');
 http.createServer((req,res) => {
     var post = '';
     req.on('data',(chunk) => {
+        console.log(chunk);
         post += chunk;
     });
     req.on('end',() => {
